@@ -1,0 +1,20 @@
+{
+  "name": "closealltabs",
+  "version": "0.1.0",
+  "description": "Quickly close all tabs on chrome",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PandawanFr/CloseAllTabs.git"
+  },
+  "author": "Pandawan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PandawanFr/CloseAllTabs/issues"
+  },
+  "homepage": "https://github.com/PandawanFr/CloseAllTabs#readme",
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}

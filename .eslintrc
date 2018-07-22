@@ -1,0 +1,14 @@
+{
+    "extends": ["eslint:recommended", "google"],
+    "env": {
+        "webextensions": true,
+        "es6": true,
+        "browser": true
+    },
+    "globals": {
+        "init": true,
+        "closeAll": true,
+        "closeLeft": true,
+        "closeRight": true
+    }
+}
