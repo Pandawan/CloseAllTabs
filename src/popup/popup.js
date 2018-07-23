@@ -1,31 +1,31 @@
-/**
- * Current checkbox
- * @return {boolean} Whether or not to remove the current tab
- */
-function getCurrent() {
-    return document.getElementById('currentCheckbox').checked;
-}
-
 document.getElementById('closeOnLeft').onclick = () => {
-    closeLeft(getCurrent(), false);
+    getCurrent((current) => {
+        closeLeft(current, false);
+    });
 };
 
 document.getElementById('closeOnRight').onclick = () => {
-    closeRight(getCurrent());
+    getCurrent((current) => {
+        closeRight(current);
+    });
 };
 
 document.getElementById('closeAllTabs').onclick = () => {
-    closeAll(getCurrent(), true);
+    getCurrent((current) => {
+        closeAll(current, true);
+    });
 };
 
 document.getElementById('closeAllWindows').onclick = () => {
-    closeAll(getCurrent(), false);
+    getCurrent((current) => {
+        closeAll(current, false);
+    });
 };
 
 
 // Get Current State from Local Storage
 chrome.storage.local.get(['current'], (value) => {
-    document.getElementById('currentCheckbox').checked = value.current;
+    document.getElementById('currentCheckbox').checked = value.current || false;
 });
 // Set Current state to Local Storage
 document.getElementById('currentCheckbox').addEventListener('change', (e) => {

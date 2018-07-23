@@ -2,9 +2,24 @@
 
 /**
  * Initialization
+ * Sets up Local Storage if not done already
  */
 function init() { // eslint-disable-line no-unused-vars
-    chrome.extension.getBackgroundPage().console.log('Hello World!');
+    chrome.storage.local.get(['current'], (value) => {
+        if (!value.current) {
+            chrome.storage.local.set({current: false});
+        }
+    });
+}
+
+/**
+ * Current checkbox
+ * @param {function} callback Callback method, given the 'current' value
+ */
+function getCurrent(callback) {
+    chrome.storage.local.get(['current'], (value) => {
+        callback(value.current);
+    });
 }
 
 /**

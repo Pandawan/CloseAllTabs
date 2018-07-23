@@ -9,6 +9,7 @@
         "init": true,
         "closeAll": true,
         "closeLeft": true,
-        "closeRight": true
+        "closeRight": true,
+        "getCurrent": true
     }
 }
