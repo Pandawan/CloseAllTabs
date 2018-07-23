@@ -1,6 +1,9 @@
 # VS Code
 .vscode
 
+# Chrome Extension private key
+*.pem
+
 # Logs
 logs
 *.log
