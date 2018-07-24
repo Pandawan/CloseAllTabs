@@ -1,6 +1,7 @@
 # Close All Tabs
 
-Quickly close all tabs on chrome (with a few more options).
+Quickly close all tabs on chrome (with a few more options).  
+**EDIT: I found out that Chrome already had that when right clicking a tab *rip***
 
 ![Screenshot of extension](ChromeWebStore/Cover.png)
 
